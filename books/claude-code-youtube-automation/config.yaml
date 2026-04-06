@@ -1,0 +1,27 @@
+title: "Claude Codeで作るYouTubeチャンネル完全自動化"
+summary: |
+  AI（Claude Code）を活用して、YouTubeチャンネルの制作パイプラインをゼロから自動化するノウハウを体系化した書籍です。
+  リサーチ→台本→音声→画像→動画→公開の全工程を、実際に稼働しているチャンネル「きなこもっちーのテック深掘り」の事例をベースに解説します。
+  Claude Code Skills、Agent Teams、VOICEVOX、Gemini API、Remotion、YouTube API を統合した制作パイプラインの設計と実装を学べます。
+topics: ["claudecode", "youtube", "ai", "automation", "remotion"]
+published: true
+price: 2000
+toc_depth: 2
+chapters:
+  - 01-introduction
+  - 02-setup
+  - 03-claude-code-basics
+  - 04-project-design
+  - 05-github-automation
+  - 06-theme-discovery
+  - 07-research
+  - 08-script-generation
+  - 09-audio-generation
+  - 10-image-generation
+  - 11-video-production
+  - 12-publishing
+  - 13-sns-distribution
+  - 14-quality-management
+  - 15-scheduled-tasks
+  - 16-retrospective
+  - 17-conclusion
