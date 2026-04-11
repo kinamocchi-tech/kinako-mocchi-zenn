@@ -162,10 +162,9 @@ assignee-type:"user","both" -status:Done -status:Backlog
 
 ```
 実装完了
-  → Slack で承認依頼（ユーザーメンション付き）
-  → ユーザー承認（Slack スレッドに OK と返信）
   → セルフレビュー（Agent Teams で並列レビュー）
-  → PR 作成
+  → PR 作成（自律実行・ユーザー承認不要）
+  → Slack で PR 作成を通知
   → AI レビュー依頼（Gemini Code Assist + GitHub Copilot）
   → 自動監視（subscribe_pr_activity によるイベント駆動。詳細は Ch.14 参照）
   → 指摘対応 / 問題なし判定

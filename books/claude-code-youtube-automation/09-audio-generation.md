@@ -96,10 +96,12 @@ Layer 3: テキスト前処理 + パラメータ最適化
 `generate_audio.py` は辞書のパターンを **長い順にソート** して適用します。これにより「Reinforcement Learning from Human Feedback」のような長いパターンが「Reinforcement」単体より先にマッチします。
 
 ```python
+import re
+
 def apply_pronunciation(text: str, terms: list) -> str:
-    """英語用語・難読語をカタカナ/ひらがな読みに置換"""
+    """英語用語・難読語をカタカナ/ひらがな読みに置換（大文字小文字を区別しない）"""
     for term in terms:
-        text = text.replace(term["pattern"], term["reading"])
+        text = re.sub(re.escape(term["pattern"]), term["reading"], text, flags=re.IGNORECASE)
     return text
 ```
 
