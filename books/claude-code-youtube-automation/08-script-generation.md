@@ -186,7 +186,7 @@ Opus 4.6 と Sonnet 4.6 は **Adaptive Thinking** を搭載しています。こ
 
 #### `/effort max` によるフル推論
 
-Claude Code の `/effort` コマンドは推論の深さを 4 段階（`low` / `medium` / `high` / `max`）で制御できます。このうち **`/effort max` は Opus 4.6 でのみ使用可能** で、フル推論を実行して最高品質の出力を得られます。
+Claude Code の `/effort` コマンドは推論の深さを 4 段階（`low` / `medium` / `high` / `max`）で制御できます。このうち **`/effort max` は Opus 4.6 および Sonnet 4.6 で使用可能** で、フル推論を実行して最高品質の出力を得られます。
 
 本プロジェクトでは台本生成時に Opus 4.6 + `/effort max` を設定しています。この設定により、以下の品質向上を実感しています。
 
@@ -195,7 +195,7 @@ Claude Code の `/effort` コマンドは推論の深さを 4 段階（`low` / `
 - **構成バランス**: セクション間の情報密度が均一化し、特定セクションだけ薄い問題が減少
 
 :::message
-Sonnet 4.6 では `/effort max` は使用できません。Sonnet のデフォルトは `/effort high`（API デフォルトと同等）で、`/effort medium` に下げるとトークン節約が可能ですが、台本生成では使用しません。
+台本生成では **Opus 4.6 + `/effort max`** の組み合わせを推奨します。Sonnet 4.6 でも `/effort max` は使用可能ですが、台本品質の観点から Opus 4.6 を優先します。Sonnet のデフォルトは `/effort high`（API デフォルトと同等）で、`/effort medium` に下げるとトークン節約が可能です。
 :::
 
 #### コストと品質のトレードオフ
