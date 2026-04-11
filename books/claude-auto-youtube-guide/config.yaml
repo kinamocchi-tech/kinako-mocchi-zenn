@@ -1,0 +1,37 @@
+title: "Claudeだけで動くYouTubeチャンネル ── 非エンジニアのための完全自動化バイブル"
+summary: |
+  「自分でYouTubeチャンネルを作りたいけど、技術的なことは苦手…」そんなあなたに。
+  実際に稼働しているAI自動制作チャンネル「きなこもっちーのテック深掘り」の構築ノウハウを、
+  非エンジニアでも再現できるよう丁寧に解説します。
+  あなたが唯一やることは「Claudeでディープリサーチをする」だけ。
+  台本生成・音声合成・動画制作・YouTubeアップロードはすべてClaudeのクラウドが自動実行します。
+  GitHubとは何か・Scheduled Tasksとは何か・CLAUDE.mdの書き方など、
+  ゼロから理解できる基礎知識も丁寧に解説。
+topics: ["claudecode", "youtube", "ai", "automation", "nocode"]
+published: true
+price: 2500
+toc_depth: 2
+chapters:
+  - 00-introduction
+  - 01-overview
+  - 02-github-basics
+  - 03-claude-code-vs-chat
+  - 04-scheduled-tasks
+  - 05-claude-md
+  - 06-skills-and-hooks
+  - 07-api-keys
+  - 08-setup-step1
+  - 09-setup-step2
+  - 10-setup-step3
+  - 11-theme-discovery
+  - 12-deep-research
+  - 13-script-generation
+  - 14-audio-generation
+  - 15-image-generation
+  - 16-video-production
+  - 17-publishing
+  - 18-schedule-design
+  - 19-human-on-the-loop
+  - 20-quality-gates
+  - 21-troubleshooting
+  - 22-conclusion
