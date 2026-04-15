@@ -34,7 +34,7 @@ title: "トラブルシューティング ── よくある問題Q&A"
 
 1. Google Cloud Console でOAuth認証フローを再実行
 2. 新しい `YOUTUBE_REFRESH_TOKEN` を取得
-3. GitHub Repository Variables を更新
+3. GitHub Repository Secrets を更新
 
 :::message
 この問題は本書の第7章（APIキーと環境変数）および第9章（セットアップ Step 2）で詳しく解説しています。
