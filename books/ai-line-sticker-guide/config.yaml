@@ -1,0 +1,29 @@
+title: "AIでLINEスタンプを作って売る完全ガイド"
+summary: |
+  gpt-image-2（OpenAI画像生成）を使って、LINEスタンプを企画・量産・透過処理・申請・販売するまでの
+  全工程を、実際に14パック以上を制作・販売したパイプラインの実例とともに体系化した実践書です。
+  キャラクターの一貫性を保つプロンプト設計（LOCKED構文）、rembgによる背景透過の落とし穴と回復法、
+  文字・吹き出しの可読性ノウハウ、アニメーションスタンプ(APNG)の整数秒要件、帯状シート量産、
+  LINE Creators Marketの申請メタデータ、価格・収益のリアル、発売48時間のマーケティングまで、
+  「机上の空論ではない、実際に審査を通した手順」を惜しみなく公開します。
+  AI画像生成は使えるが「売れる形」に落とせない人、副業でスタンプ販売を始めたい人向け。
+topics: ["ai", "linestamp", "gptimage", "openai", "python"]
+published: true
+price: 1500
+toc_depth: 2
+chapters:
+  - 01-introduction
+  - 02-overview
+  - 03-character-sheet
+  - 04-character-consistency
+  - 05-mass-production
+  - 06-batch-vs-individual
+  - 07-background-removal
+  - 08-text-and-balloon
+  - 09-finalize-validate
+  - 10-animation-apng
+  - 11-strip-sheet
+  - 12-line-submission
+  - 13-pricing-and-review
+  - 14-marketing
+  - 15-conclusion
