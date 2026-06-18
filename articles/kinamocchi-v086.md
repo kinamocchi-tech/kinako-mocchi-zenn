@@ -1,5 +1,5 @@
 ---
-title: Copilot一強時代は終わった？2026年春AIコーディングツール三強比較 — Windsurf vs Cursor vs Claude Code
+title: Copilot一強時代は終わった？AIコーディングツール2026春三つ巴の真実
 emoji: ⚔️
 type: tech
 topics:
@@ -11,7 +11,7 @@ topics:
 published: true
 ---
 
-# Copilot一強時代は終わった？2026年春AIコーディングツール三強比較
+# Copilot一強時代は終わった？AIコーディングツール2026春三つ巴の真実
 
 :::message
 📺 この記事は YouTube「きなこもっちーのテック深掘り」の動画解説記事です。

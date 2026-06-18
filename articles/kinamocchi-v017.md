@@ -1,5 +1,5 @@
 ---
-title: AIエージェントのコスト問題を解決するNVIDIA Nemotron 3 Super — Mamba-2×Transformer×MoEハイブリッドアーキテクチャ徹底解説
+title: AIエージェントのコスト問題を解決！NVIDIA Nemotron Super 深掘り解説
 emoji: 💰
 type: tech
 topics:
@@ -11,7 +11,7 @@ topics:
 published: true
 ---
 
-# AIエージェントのコスト問題を解決するNVIDIA Nemotron 3 Super
+# AIエージェントのコスト問題を解決！NVIDIA Nemotron Super 深掘り解説
 
 :::message
 📺 この記事は YouTube「きなこもっちーのテック深掘り」の動画解説記事です。
