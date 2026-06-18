@@ -98,10 +98,25 @@ Layer 3: テキスト前処理 + パラメータ最適化
 ```python
 import re
 
+def _use_word_boundary(pattern: str) -> bool:
+    """ASCII パターンは単語境界マッチを使用して部分マッチを防ぐ"""
+    if not pattern.isascii():
+        return False
+    return bool(re.match(r'^[A-Za-z0-9]', pattern) and re.search(r'[A-Za-z0-9]$', pattern))
+
 def apply_pronunciation(text: str, terms: list) -> str:
     """英語用語・難読語をカタカナ/ひらがな読みに置換（大文字小文字を区別しない）"""
     for term in terms:
-        text = re.sub(re.escape(term["pattern"]), term["reading"], text, flags=re.IGNORECASE)
+        pattern = term["pattern"]
+        reading = term["reading"]
+        if _use_word_boundary(pattern):
+            # ASCII 略語・英単語: 単語境界 \b で部分マッチを防ぐ
+            # 例: "AI" が "chair" の "ai" と誤マッチしないよう re.ASCII を使用
+            regex = r'\b' + re.escape(pattern) + r'\b'
+            text = re.sub(regex, reading, text, flags=re.IGNORECASE | re.ASCII)
+        else:
+            # 日本語・記号を含むパターン: 部分文字列マッチ
+            text = re.sub(re.escape(pattern), reading, text, flags=re.IGNORECASE)
     return text
 ```
 
