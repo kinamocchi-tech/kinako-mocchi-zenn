@@ -1,6 +1,6 @@
 ---
 title: Copilot一強時代は終わった？AIコーディングツール2026春三つ巴の真実
-emoji: ⚔️
+emoji: 🥊
 type: tech
 topics:
 - cursor
