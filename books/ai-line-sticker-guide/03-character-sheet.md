@@ -155,6 +155,16 @@ response = client.images.generate(
 最小構成だけでは特徴が安定しません。実戦では design-spec の基本プロンプトをそのまま埋め込みます。もっちーの例です。
 
 ```python
+import base64
+from openai import OpenAI
+
+client = OpenAI()  # 環境変数 OPENAI_API_KEY を読む
+
+def save_b64_png(b64: str, path: str) -> None:
+    """gpt-image-2 が返す base64 PNG をデコードしてファイルに保存するヘルパー。"""
+    with open(path, "wb") as f:
+        f.write(base64.b64decode(b64))
+
 MOCCHI_BASE = """\
 A round, mochi-mochi golden hamster character named "Mocchi",
 chibi 2-head-tall proportions, sticker illustration style,
