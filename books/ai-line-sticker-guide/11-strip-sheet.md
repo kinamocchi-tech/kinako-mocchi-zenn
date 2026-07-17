@@ -150,8 +150,11 @@ V8（きなこ）の量産で、ほぼ全コマに黒い塗りつぶしパネル
 :::
 
 ```python
+from PIL import Image
+
 # 参照画像を白地に平坦化してから edit に渡す（黒パネル根絶）
 def _flatten_white(img):
+    img = img.convert("RGBA")  # RGB入力でも安全に扱えるよう防御変換（split()[3] の IndexError回避）
     # 透過 PNG を白背景に合成 → 透明部 RGB の黒を白に置換
     bg = Image.new("RGB", img.size, (255, 255, 255))
     bg.paste(img, mask=img.split()[3])  # アルファをマスクに合成
