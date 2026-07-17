@@ -137,10 +137,35 @@ balloon fill color = #FFF8E0 (cream) — NEVER pure white #FFFFFF
 ナイーブに考えると「透明なピクセルを全部白で埋める」となりますが、これは破綻します。キャラの外側の背景まで白く塗ってしまうからです。私たちが使うのは **connected-component（連結成分）法** で、これは数学的に誤塗りゼロを保証します。
 
 ```python
-# fix_balloon_fill.py / solidify_balloon_fill の考え方
-# 1. 透明 (α=0) ピクセルをラベリングして「連結した塊」に分ける
-# 2. 画像の端に接している透明成分 = 外側の背景 → 触らない
-# 3. 画像の端に接しない孤立した透明成分 = 吹き出しの内側 → ここだけ白で塗る
+# fix_balloon_fill.py
+from PIL import Image
+from scipy import ndimage
+import numpy as np
+
+def fix_balloon_fill(img: Image.Image) -> Image.Image:
+    """吹き出し内側の孤立した透明ピクセルをクリーム色（#FFF8E0）で塗りつぶす。
+    画像の端に接する透明領域（＝外側の背景）は触らない。"""
+    img = img.convert("RGBA")
+    alpha = np.array(img)[:, :, 3]
+    transparent_mask = alpha == 0
+
+    # 1. 透明 (α=0) ピクセルをラベリングして「連結した塊」に分ける
+    labeled, num_labels = ndimage.label(transparent_mask)
+
+    # 2. 画像の端に接しているラベル = 外側の背景 → 触らない
+    edge_labels = set(labeled[0, :]) | set(labeled[-1, :]) | set(labeled[:, 0]) | set(labeled[:, -1])
+    edge_labels.discard(0)  # 0 は不透明領域（ラベルなし）
+
+    # 3. 端に接しない孤立した透明成分 = 吹き出しの内側 → ここだけクリームで塗る
+    pixels = img.load()
+    for label_id in range(1, num_labels + 1):
+        if label_id in edge_labels:
+            continue
+        ys, xs = np.where(labeled == label_id)
+        for y, x in zip(ys, xs):
+            pixels[x, y] = (255, 248, 224, 255)  # #FFF8E0（クリーム。純白は使わない）
+
+    return img
 ```
 
 ポイントは **「画像端に接するかどうか」** で内外を判定することです。
