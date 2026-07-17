@@ -7,7 +7,7 @@ free: true
 
 - 制作パイプラインに必要なツール一覧
 - Claude Code のインストールと初期設定
-- VOICEVOX Engine・Gemini API・YouTube Data API のセットアップ
+- VOICEVOX Engine・OpenAI API（画像生成）・YouTube Data API のセットアップ
 - 環境変数の管理方法（クラウド環境 vs ローカル環境）
 
 ---
@@ -21,7 +21,8 @@ free: true
 | **Python** (3.11 以上) | VOICEVOX 連携、YouTube API、各種スクリプト | 必須 |
 | **Git** + **GitHub CLI** (`gh` v2.64+) | バージョン管理、PR 運用 | 必須 |
 | **VOICEVOX Engine** | 音声合成 API サーバー | 必須 |
-| **Gemini API** | 画像生成 | 必須 |
+| **OpenAI API** | 画像生成（gpt-image-2・主エンジン） | 必須 |
+| **Gemini API** | 画像生成のフォールバック | 推奨 |
 | **FFmpeg** | Remotion の動画レンダリングで内部的に使用 | 必須 |
 | **YouTube Data API v3** | 動画アップロード・公開スケジュール管理 | Phase 6 以降 |
 | **Docker**（オプション） | VOICEVOX Engine のコンテナ実行 | 推奨 |
@@ -83,10 +84,13 @@ curl http://localhost:50021/version
 
 ---
 
-## Gemini API キーの取得と設定
+## 画像生成 API キーの取得と設定
 
-1. [Google AI Studio](https://aistudio.google.com/) でAPIキーを生成
-2. `.mcp.json` に MCP サーバー設定を記述
+画像生成の主エンジンは **OpenAI の gpt-image-2**（`provider="openai"`, `quality="medium"`）です。Gemini API は OpenAI 側の請求上限に達したときのフォールバックとしてのみ使うため、両方のキーを用意しておきます。
+
+1. [OpenAI Platform](https://platform.openai.com/) で API キーを発行（主エンジン用・実質必須）
+2. [Google AI Studio](https://aistudio.google.com/) で API キーを発行（フォールバック用）
+3. `.mcp.json` に MCP サーバー設定を記述
 
 ```json
 {
@@ -95,7 +99,7 @@ curl http://localhost:50021/version
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://your-gemini-mcp-server.workers.dev/mcp",
+        "https://your-image-mcp-server.workers.dev/mcp",
         "--header",
         "Authorization: Bearer ${GEMINI_MCP_AUTH_TOKEN}"
       ]
@@ -105,9 +109,9 @@ curl http://localhost:50021/version
 ```
 
 :::message
-本書では Gemini API を MCP サーバー経由で呼び出します。MCP サーバー自体は Cloudflare Workers 上にデプロイします。詳細は本書のサンプルコードを参照してください。
+MCP サーバー名は `gemini-image` のままですが、実際に呼び出すモデルは `generate_image` ツールの `provider` パラメーターで切り替えます。`provider="openai"` を指定すると gpt-image-2 が生成を担当し、フォールバック時のみ Gemini が呼ばれます。サーバー名と主エンジンが一致していないのは、当初 Gemini を主エンジンとして構築した設計をそのまま流用しているためです（採用経緯は Ch.10 で扱います）。
 
-**MCP サーバーの構築は上級トピックです。本書では Gemini API を直接呼び出す方法を推奨します。MCP サーバーの構築手順は Part 2（近日公開予定）で解説します。**
+MCP サーバー自体は Cloudflare Workers 上にデプロイします。構築手順は本書のサンプルコードを参照してください。
 :::
 
 ---
@@ -215,7 +219,8 @@ echo ".claude/settings.local.json" >> .gitignore
 | 変数名 | 用途 | 必要になる Phase |
 |--------|------|----------------|
 | `SLACK_BOT_TOKEN` | Slack 通知 | 全 Phase（オプション） |
-| `GEMINI_API_KEY` | 画像生成 | Phase 4（画像） |
+| `OPENAI_API_KEY` | 画像生成（主エンジン・gpt-image-2） | Phase 4（画像） |
+| `GEMINI_API_KEY` | 画像生成（フォールバック用） | Phase 4（画像） |
 | `GEMINI_MCP_AUTH_TOKEN` | MCP サーバー認証 | Phase 4（画像） |
 | `YOUTUBE_CLIENT_ID` | YouTube API 認証 | Phase 6 |
 | `YOUTUBE_CLIENT_SECRET` | YouTube API 認証 | Phase 6 |
@@ -263,8 +268,6 @@ git lfs version        # Git LFS
 
 - **Claude Code**: `CLAUDE.md` と `.claude/` ディレクトリを初期化
 - **VOICEVOX Engine**: Docker で `localhost:50021` に起動
-- **Gemini API**: Google AI Studio で API キーを取得し、MCP サーバー設定を記述
+- **画像生成 API**: OpenAI の API キー（主エンジン gpt-image-2 用・必須）と Gemini の API キー（フォールバック用・推奨）を取得し、MCP サーバー設定を記述
 - **YouTube Data API**: OAuth 2.0 の認証情報を取得
 - **環境変数**: クラウド環境ではスケジュールタスク設定で管理
-
-次のチャプターでは、Claude Code の基礎機能（Skills・Hooks・Agent Teams）について詳しく解説します。
