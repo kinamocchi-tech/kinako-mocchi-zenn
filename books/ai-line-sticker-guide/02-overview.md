@@ -189,12 +189,13 @@ rembg[cli]      # 背景除去本体
 onnxruntime     # rembg の推論バックエンド（CPU）
 Pillow          # 画像処理（リサイズ・透過マージン・PNG最適化）
 numpy           # アルファマスクの配列演算（solidify_alpha 等）
-scikit-learn    # 連結成分ラベリング（内部不透明化・吹き出し穴埋め）
+scipy           # 連結成分ラベリング（内部不透明化・吹き出し穴埋め。scipy.ndimage.label）
+scikit-learn    # キャラ色抽出（k-means によるマスターカラー抽出）
 apngasm-python  # アニメ APNG 生成（第10・11章で必須）
 ```
 
 :::message alert
-**`apngasm-python` を省かないでください。** 第 10・11 章で詳述するとおり、**Pillow 製の APNG は LINE に弾かれます**。アニメーションスタンプを作るなら APNG Assembler（`apngasm-python`）が必須です。`numpy` / `scikit-learn` も第 07・08 章の内部不透明化・吹き出し穴埋め（連結成分処理）で使うため、4 行だけでなく上記すべてを入れてください。静止画スタンプだけを作るなら `apngasm-python` は後回しでも構いませんが、入れておいて損はありません。
+**`apngasm-python` を省かないでください。** 第 10・11 章で詳述するとおり、**Pillow 製の APNG は LINE に弾かれます**。アニメーションスタンプを作るなら APNG Assembler（`apngasm-python`）が必須です。`numpy` / `scipy` も第 07・08 章の内部不透明化・吹き出し穴埋め（連結成分処理）で使うため、4 行だけでなく上記すべてを入れてください。静止画スタンプだけを作るなら `apngasm-python` は後回しでも構いませんが、入れておいて損はありません。
 :::
 
 :::details rembg の初回実行について（折りたたみ）
