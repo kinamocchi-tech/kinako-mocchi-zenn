@@ -162,24 +162,27 @@ assignee-type:"user","both" -status:Done -status:Backlog
 
 ```
 実装完了
-  → セルフレビュー（Agent Teams で並列レビュー）
+  → L0 機械チェック（self_review_check.py + Lv4 CI がハードゲート）
+  → L1 セルフレビュー（同一セッションで /code-review --fix を実行）
   → PR 作成（自律実行・ユーザー承認不要）
   → Slack で PR 作成を通知
-  → AI レビュー依頼（Gemini Code Assist + GitHub Copilot）
-  → 自動監視（subscribe_pr_activity によるイベント駆動。詳細は Ch.14 参照）
-  → 指摘対応 / 問題なし判定
+  → 判定ラベルで分岐
+      l1-reviewed:cleared → 即マージ（待機ゼロ）
+      l1-reviewed:negative → subscribe_pr_activity で監視しつつ、次セッションが L2 /code-review --comment で精査
   → 自動マージ（squash）
   → 完了報告（Slack 通知）
 ```
 
-**AI レビュアー**:
+**レビュー階層（L0〜L3）**:
 
-| レビュアー | 依頼方法 |
-|-----------|---------|
-| Gemini Code Assist | PR コメントで `/gemini review` |
-| GitHub Copilot | `gh pr edit {number} --add-reviewer @copilot -R your-repo` |
+| 階層 | 実行者 | 内容 |
+|------|--------|------|
+| L0 | 機械チェック | `self_review_check.py` + Lv4 CI がハードゲート。通過しない変更は PR にしない |
+| L1 | 同一セッション | `/code-review --fix` を起動して指摘をその場で修正し、判定ラベル `l1-reviewed:cleared`（重大な懸念なし）または `l1-reviewed:negative`（要精査）を付与する |
+| L2 | 次セッション（フレッシュ文脈） | `l1-reviewed:negative` の PR だけを `/code-review --comment` で精査する |
+| L3 | 議論型レビュー | 台本・コンテンツ PR のみ。`run_discussion_review.py` による敵対的相互レビュー |
 
-AI レビューの全指摘を解消したら、ユーザー確認なしで自動マージします。サーキットブレーカー（修正サイクル 2 回上限）が発動した場合のみ、ユーザーに報告して判断を仰ぎます。
+レビューの全指摘を解消したら、ユーザー確認なしで自動マージします（squash）。サーキットブレーカー（修正サイクル 2 回上限）が発動した場合のみ、ユーザーに報告して判断を仰ぎます。
 
 ---
 
@@ -261,5 +264,3 @@ gh pr create \
 | Video ID 採番 | Issue タイトルから自動検出・連番付与 |
 | Projects V2 同期 | `sync_project.py` で全 Issue を自動登録・フィールド設定 |
 | PR レビュー | AI レビュー → 自動監視 → 指摘対応 → 自動マージ |
-
-次のチャプターからは Part 2（制作パイプライン）に入り、テーマ発見の自動化から解説を始めます。ここまでで構築した基盤（Skills, Hooks, Agent Teams, CLAUDE.md, GitHub 連携）が、制作の各工程でどのように活用されるかを見ていきましょう。
