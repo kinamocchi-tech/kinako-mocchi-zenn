@@ -11,6 +11,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![OpenAIの新音声AI「GPT-Live」は本当にすごい？開発者向けAPIがまだない理由【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V246/V246_graphreco.png)
+
 # OpenAIの新音声AI「GPT-Live」は本当にすごい？開発者向けAPIがまだない理由
 
 > 🐹🦜 **この記事に登場する2匹**
