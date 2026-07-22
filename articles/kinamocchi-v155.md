@@ -9,6 +9,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![マウスカーソルは58年間ほぼ進化してなかった？GoogleのMagic PointerがAI×UI革命を起こす【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V155/V155_graphreco.png)
+
 # マウスカーソルは58年間ほぼ進化してなかった？GoogleのMagic PointerがAI×UI革命を起こす
 
 > 🐹🦜 **この記事に登場する2匹**
