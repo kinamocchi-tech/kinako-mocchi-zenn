@@ -11,6 +11,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![A100→H100→B200は性能じゃない？NVIDIAが値下げしない本当の理由【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V243/V243_graphreco.png)
+
 # A100→H100→B200は性能じゃない？NVIDIAが値下げしない本当の理由
 
 > 🐹🦜 **この記事に登場する2匹**
