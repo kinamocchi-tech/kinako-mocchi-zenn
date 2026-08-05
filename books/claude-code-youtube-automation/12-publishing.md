@@ -128,7 +128,7 @@ YOUTUBE_API_PROXY_AUTH_TOKEN=your_proxy_auth_token
 ```
 
 :::message
-`search().list(forMine=True)` は使いません。非公開動画が検索結果に含まれない場合がある API 仕様の制限と、クォータコストが高い（100ユニット/リクエスト）ためです。`channels` + `playlistItems` の組み合わせは各1ユニットで、正確な結果が得られます。
+`search().list(forMine=True)` は使いません。非公開動画が検索結果に含まれない場合がある API 仕様の制限と、クォータ枠の消費が大きい（`search.list` は 1 日 100 コールの専用枠で、他エンドポイント合計の 10,000 ユニット枠とは別勘定）ためです。`channels` + `playlistItems` の組み合わせは各1ユニットで、正確な結果が得られます。
 :::
 
 ### メタデータ必須チェック
