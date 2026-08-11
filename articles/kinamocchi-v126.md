@@ -11,6 +11,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![日本のAI活用は本当に周回遅れ？9大調査機関のデータで見えた衝撃の真実｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V126/V126_graphreco.png)
+
 # 日本のAI活用は本当に周回遅れ？9大調査機関のデータで見えた衝撃の真実
 
 > 🐹🦜 **この記事に登場する2匹**
