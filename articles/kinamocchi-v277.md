@@ -10,6 +10,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![ChatGPTが年齢を推定する時代へ｜10代モードで変わること【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V277/V277_graphreco.png)
+
 # ChatGPTが年齢を推定する時代へ｜10代モードで変わること
 
 > 🐹🦜 **この記事に登場する2匹**
