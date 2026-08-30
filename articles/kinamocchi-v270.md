@@ -1,5 +1,5 @@
 ---
-title: Claude Opus 5の30.2%、信じていい数字はどっち？ARC-AGI-3の衝撃【解説記事】
+title: Claude Opus 5の30.2%、信じていい数字はどっち？ARC-AGI-3の衝撃
 emoji: 🤖
 type: tech
 topics:
@@ -10,6 +10,9 @@ topics:
 - llm
 published: true
 ---
+
+<!-- グラレコ:graphreco -->
+![Claude Opus 5の30.2%、信じていい数字はどっち？ARC-AGI-3の衝撃【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V270/V270_graphreco.png)
 
 # Claude Opus 5の30.2%、信じていい数字はどっち？ARC-AGI-3の衝撃
 
