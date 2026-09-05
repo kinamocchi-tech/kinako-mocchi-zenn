@@ -22,7 +22,7 @@ published: true
 
 :::message
 📺 この記事は YouTube「きなこもっちーのテック深掘り」の動画解説記事です。
-動画はこちら: [最もアラインしたAIが、なぜ危険度Critical？GPT-6 Astraの矛盾](https://youtu.be/fDsm_FNj4eg)
+動画はこちら: [最もアラインしたAIが、なぜ危険度Critical？GPT-6 Astraの矛盾](https://www.youtube.com/watch?v=fDsm_FNj4eg)
 :::
 
 ## この記事で分かること
@@ -96,6 +96,8 @@ published: true
 ![Summary card 3 of 3: 'Deployment order itself became a design decision'](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V280/055.png)
 - 🦜 きなこ：そう。で、三つめ。危ないことにも使える力が出てきた以上、誰に先に渡すかっていう配る順番そのものが、設計する対象になったの
 - 🐹 もっちー：うーん、話は分かったけど、ぼくは何をしたらいいの？ こういうニュース、聞いて終わりになりがちなんだよね
+![One-step action card: 'Open the ChatGPT model picker and check whether GPT-6 Pro appears on your plan'](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V280/057.png)
+- 🦜 きなこ：じゃあ今日はひとつだけ。ChatGPT のモデルを選ぶ画面を開いて、自分のプランで一番新しいのはどれか見てみて
 
 ---
 
