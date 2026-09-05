@@ -11,6 +11,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![最もアラインしたAIが、なぜ危険度Critical？GPT-6 Astraの矛盾【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V280/V280_graphreco.png)
+
 # 最もアラインしたAIが、なぜ危険度Critical？GPT-6 Astraの矛盾
 
 > 🐹🦜 **この記事に登場する2匹**
