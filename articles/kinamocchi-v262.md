@@ -9,6 +9,9 @@ topics:
 published: false
 ---
 
+<!-- グラレコ:graphreco -->
+![中国AIがClaudeに勝った？Kimi K3『76%』の数字に潜むベンチマークの罠【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V262/V262_graphreco.png)
+
 # 中国AIがClaudeに勝った？Kimi K3『76%』の数字に潜むベンチマークの罠
 
 > 🐹🦜 **この記事に登場する2匹**
