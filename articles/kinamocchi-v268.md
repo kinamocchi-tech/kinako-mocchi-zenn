@@ -9,6 +9,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![「Claudeに意識が芽生えた」は誤読——J-spaceで本当に分かったこと【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V268/V268_graphreco.png)
+
 # AI意識ニュースの読み分け方｜Claudeの内部で見つかったJ-space
 
 > 🐹🦜 **この記事に登場する2匹**
