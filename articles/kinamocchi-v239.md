@@ -9,6 +9,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![科学者の2年分の仕事が数週間に？Anthropic「Claude Science」の正体とその代償【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V239/V239_graphreco.png)
+
 # 科学者の2年分の仕事が数週間に？Anthropic「Claude Science」の正体とその代償
 
 > 🐹🦜 **この記事に登場する2匹**
