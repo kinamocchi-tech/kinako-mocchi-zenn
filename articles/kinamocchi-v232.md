@@ -9,6 +9,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![Anthropicが『提訴』しなかった理由——Alibaba2,880万件不正利用の真相【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V232/V232_graphreco.png)
+
 # Anthropicが『提訴』しなかった理由——Alibaba2,880万件不正利用の真相
 
 > 🐹🦜 **この記事に登場する2匹**
