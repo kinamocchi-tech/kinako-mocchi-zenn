@@ -9,6 +9,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![48時間でGoogleから天才2人消えた日──「人材流出で新型AI延期」は実は誤解だった【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V238/V238_graphreco.png)
+
 # 48時間でGoogleから天才2人消えた日──「人材流出で新型AI延期」は実は誤解だった
 
 > 🐹🦜 **この記事に登場する2匹**
