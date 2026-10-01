@@ -11,6 +11,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![Googleが一番『儲かってる』は本当？OpenAI・Meta・Anthropic決算のAI勢力図【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V244/V244_graphreco.png)
+
 # Googleが一番『儲かってる』は本当？OpenAI・Meta・Anthropic決算のAI勢力図
 
 > 🐹🦜 **この記事に登場する2匹**
