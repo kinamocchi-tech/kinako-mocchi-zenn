@@ -11,6 +11,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![なぜ最強評価の中国AIモデルが株は「中立」なのか｜目標株価HK$1,880【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V254/V254_graphreco.png)
+
 # なぜ最強評価の中国AIモデルが株は「中立」なのか｜目標株価HK$1,880
 
 > 🐹🦜 **この記事に登場する2匹**
