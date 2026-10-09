@@ -9,6 +9,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![AIの「完了しました」は嘘だった？Anthropicが測った4つの静かな失敗【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V256/V256_graphreco.png)
+
 # AIの「完了しました」は嘘だった？Anthropicが測った4つの静かな失敗
 
 > 🐹🦜 **この記事に登場する2匹**
