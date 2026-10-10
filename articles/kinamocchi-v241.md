@@ -9,6 +9,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![NVIDIA粗利率75%の真実——原価6,400ドルが4万ドルに化ける理由【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V241/V241_graphreco.png)
+
 # NVIDIA粗利率75%の真実——原価6,400ドルが4万ドルに化ける理由
 
 > 🐹🦜 **この記事に登場する2匹**
