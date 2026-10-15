@@ -1,0 +1,20 @@
+title: "AI自動化が壊れる順番——無人運用7か月・失敗記録229件から作った分類表と再発防止テンプレート"
+summary: |
+  Claude Code などのエージェントで、業務や発信の無人運用を始めた個人開発者・小さなチームのリード向けの本です。
+  筆者が約 7 か月、1 人で無人運用してきた制作パイプラインの失敗記録 229 件を、壊れ方の仕組みで 8 つに分類し、件数と時期の推移から「運用期間とともに何が先に壊れるか」を示します。
+  前半は形式・生成物・外部仕様の失敗、中盤は並行実行の衝突、後半は検査をすり抜ける「黙った失敗」が中心になりました。
+  各分類について、兆候・3 層の原因・仕組みへの昇格（文書 → AI チェック → フック）を整理し、手元に合わせて調整して使えるチェックリスト・失敗記録のフォーマット・昇格判断表と、実行確認済みのフック／スクリプトの雛形を付けています。
+  第 1 章（分類表と壊れる順番の全体像）と最終章（集計方法と限界）は無料で読めます。
+topics: ["claudecode", "ai", "automation", "aiagent", "sre"]
+published: true
+price: 1000
+toc_depth: 2
+chapters:
+  - 01-failure-map
+  - 02-format-drift
+  - 03-generation-and-platform
+  - 04-concurrency-and-environment
+  - 05-agent-self-report
+  - 06-silent-failures
+  - 07-ops-debt-and-records
+  - 08-method-and-limits
