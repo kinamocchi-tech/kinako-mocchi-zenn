@@ -11,6 +11,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![PHPの重大な脆弱性、自分のサイトは対象？修正が止まった理由まで【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V310/V310_graphreco.png)
+
 # PHPの重大な脆弱性、自分のサイトは対象？修正が止まった理由まで
 
 > 🐹🦜 **この記事に登場する2匹**
