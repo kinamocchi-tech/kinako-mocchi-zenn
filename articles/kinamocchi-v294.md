@@ -9,6 +9,9 @@ topics:
 published: false
 ---
 
+<!-- グラレコ:graphreco -->
+![なぜ32Bより小さい27Bが1位なのか｜whichllmのRTX 4090例 92.8点と83.0点【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V294/V294_graphreco.png)
+
 # なぜ32Bより小さい27Bが1位なのか｜whichllmのRTX 4090例 92.8点と83.0点
 
 > 🐹🦜 **この記事に登場する2匹**
