@@ -11,6 +11,9 @@ topics:
 published: true
 ---
 
+<!-- グラレコ:graphreco -->
+![Gemini 4 Neonの単価はCarbonより高いのに12月に逆転する理由。ベンチの読み方も整理【解説記事】｜グラレコ要約](https://pub-2687e67855c941a0a1a9e1ad51ffc967.r2.dev/images/V328/V328_graphreco.png)
+
 # Gemini 4 Neonの単価はCarbonより高いのに12月に逆転する理由。ベンチの読み方も整理
 
 > 🐹🦜 **この記事に登場する2匹**
